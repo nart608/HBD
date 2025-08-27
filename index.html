@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>สุขสันต์วันเกิดนะคนเก่ง</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;700&family=Sriracha&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="container" id="info-page">
+        <h1 class="title">สุขสันวันเกิดนะคนเก่ง</h1>
+        <div class="input-group">
+            <label for="birthdate">โปรดใส่วันเกิด:</label> <input type="text" id="birthdate" class="input-field" placeholder="ตัวอย่าง: 2006-01-31">
+        </div>
+        <button id="prepare-cake-btn" class="cta-button">รับเค้กของคุณ!</button> <p id="age-summary" class="summary-text"></p>
+    </div>
+
+    <div class="container" id="cake-page" style="display: none;">
+        <h1 id="happy-bday-text" class="happy-bday-text"></h1>
+        <div class="cake-container">
+            <img id="cake-img" src="" alt="Birthday Cake" class="cake">
+            <div id="candle-container" class="candles"></div>
+        </div>
+        <p class="instruction">คลิกที่เทียนเพื่อจุดไฟ จากนั้นเป่าเทียนเพื่อดับไฟ!</p>
+        <button id="blow-out-btn" class="cta-button" style="display:none;">เป่าเทียน!</button>
+    </div>
+
+    <div class="container" id="letter-page" style="display: none;">
+        <div class="letter-box">
+            <img src="https://i.ibb.co/6803h7Z/letter-closed.png" alt="ซองจดหมายปิด" id="closed-letter" class="letter-img">
+            <div id="open-letter" class="open-letter" style="display: none;">
+                <p id="message-text"></p>
+            </div>
+        </div>
+        <p class="instruction">คลิกที่ซองจดหมายเพื่อเปิด</p>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,206 @@
+body {
+    font-family: 'Sriracha', cursive;
+    /* เปลี่ยนเป็น Gradient สวยๆ */
+    background: linear-gradient(135deg, #fce9f2 0%, #ffeaf5 100%); 
+    color: #70597e;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    margin: 0;
+    text-align: center;
+    overflow: hidden;
+}
+
+.container {
+    background-color: rgba(255, 255, 255, 0.9); /* ให้โปร่งแสงนิดหน่อย */
+    border-radius: 20px;
+    padding: 40px 30px; /* เพิ่ม padding บน-ล่าง */
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08); /* ปรับเงาให้นุ่มและชัดขึ้น */
+    max-width: 400px;
+    width: 90%;
+    margin: 20px auto;
+    animation: fadeIn 1s ease-in-out;
+    display: flex; /* ใช้ flexbox จัดองค์ประกอบภายใน */
+    flex-direction: column; /* จัดเรียงจากบนลงล่าง */
+    justify-content: center; /* จัดกึ่งกลางแนวตั้ง */
+    align-items: center; /* จัดกึ่งกลางแนวนอน */
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: scale(0.95); }
+    to { opacity: 1; transform: scale(1); }
+}
+
+.title {
+    font-family: 'Dancing Script', cursive;
+    font-size: 2.5em;
+    color: #d81b60; /* สีชมพูเข้มเด่นขึ้น */
+    margin-bottom: 25px; /* เพิ่มระยะห่างด้านล่าง */
+    line-height: 1.2; /* ปรับระยะห่างระหว่างบรรทัด */
+}
+
+.happy-bday-text {
+    font-family: 'Dancing Script', cursive;
+    font-size: 3em;
+    color: #d81b60;
+    margin-bottom: 25px;
+    animation: bounceIn 1s ease-out;
+}
+
+@keyframes bounceIn {
+    0% { transform: scale(0.1); opacity: 0; }
+    60% { transform: scale(1.2); opacity: 1; }
+    100% { transform: scale(1); }
+}
+
+.input-group {
+    margin-bottom: 30px; /* เพิ่มระยะห่างด้านล่าง */
+    width: 100%; /* ให้เต็มความกว้าง */
+}
+
+.input-group label {
+    font-size: 1.1em; /* ปรับขนาดข้อความ label */
+    margin-bottom: 10px; /* เพิ่มระยะห่างด้านล่าง */
+    display: block; /* ให้ label อยู่บรรทัดใหม่ */
+    color: #a081a9; /* สีม่วงอ่อนลง */
+}
+
+.input-field {
+    width: calc(100% - 40px); /* ปรับความกว้างให้พอดีกับ padding */
+    padding: 12px 20px; /* เพิ่ม padding */
+    border: 2px solid #f8c8dc;
+    border-radius: 10px;
+    font-size: 1.1em; /* ปรับขนาดตัวอักษร */
+    font-family: 'Sriracha', cursive;
+    text-align: center;
+    color: #70597e;
+    transition: border-color 0.3s ease; /* เพิ่ม transition */
+}
+
+.input-field:focus {
+    outline: none;
+    border-color: #f3a6b8; /* สีขอบตอน focus */
+}
+
+.cta-button {
+    background: linear-gradient(45deg, #f8c8dc, #f3a6b8); /* ปุ่มไล่ระดับสี */
+    color: #fff;
+    border: none;
+    padding: 15px 40px; /* เพิ่ม padding ด้านข้าง */
+    border-radius: 50px;
+    font-size: 1.2em;
+    font-weight: bold;
+    cursor: pointer;
+    transition: transform 0.3s, box-shadow 0.3s; /* ปรับ transition */
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.15); /* ปรับเงาให้ดูมีมิติ */
+}
+
+.cta-button:hover {
+    transform: translateY(-5px); /* เพิ่มการเคลื่อนที่ตอน hover */
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2); /* เพิ่มเงาตอน hover */
+}
+
+.summary-text {
+    font-size: 1.2em;
+    margin-top: 25px; /* เพิ่มระยะห่างด้านบน */
+    color: #d81b60;
+}
+
+.cake-container {
+    position: relative;
+    width: 300px;
+    height: 300px;
+    margin: 30px auto; /* เพิ่มระยะห่าง */
+}
+
+.cake {
+    width: 100%;
+    height: auto;
+    animation: pulse 2s infinite;
+}
+
+@keyframes pulse {
+    0%, 100% { transform: scale(1); }
+    50% { transform: scale(1.03); } /* ลดการขยับให้นุ่มนวลขึ้น */
+}
+
+.candles {
+    position: absolute;
+    top: 5%;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    justify-content: center;
+}
+
+.candle {
+    width: 20px;
+    height: 60px;
+    position: relative;
+    cursor: pointer;
+    margin: 0 5px;
+}
+
+.candle-flame {
+    width: 100%;
+    height: 100%;
+    background-image: url('https://i.ibb.co/1fWc5Yc/candle-on.png');
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    opacity: 0;
+    transition: opacity 0.3s;
+}
+
+.candle.on .candle-flame {
+    opacity: 1;
+}
+
+.instruction {
+    font-size: 0.9em;
+    color: #b0a4bc;
+    margin-top: 25px; /* เพิ่มระยะห่างด้านบน */
+}
+
+.letter-box {
+    position: relative;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px; /* เพิ่มระยะห่าง */
+}
+
+.letter-img {
+    width: 250px;
+    cursor: pointer;
+    transition: transform 0.5s;
+}
+
+.letter-img:hover {
+    transform: scale(1.05);
+}
+
+.open-letter {
+    position: absolute;
+    background-image: url('https://i.ibb.co/7XgPj5X/letter-open.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    width: 100%;
+    height: 100%;
+    padding: 70px 40px 40px;
+    box-sizing: border-box;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#message-text {
+    font-family: 'Dancing Script', cursive;
+    font-size: 1.5em;
+    color: #3e2723;
+    line-height: 1.4;
+    text-align: center;
+}
