@@ -3,43 +3,30 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>เกิดเเล้วนะ</title>
+    <title>Happy Birthday!</title>
     <link rel="stylesheet" href="style.css">
-    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;700&family=Sriracha&display=swap" rel="stylesheet">
-</head>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Mitr:wght@400;700&display=swap" rel="stylesheet"></head>
 <body>
-    <div class="container" id="info-page">
-        <h1 class="title">สุขสันวันเกิดนะคนเก่ง</h1>
-        <div class="input-group">
-            <label for="birthdate">โปรดใส่วันเกิด:</label>
-            <input type="text" id="birthdate" class="input-field" placeholder="ตัวอย่าง: 2006-01-31">
+
+
+    <div class="cake-container">
+        <img src="เค้กวันเกิด.png" alt="Birthday Cake" class="cake-image">
+
+        <div class="text-on-cake">
+            <p>happy birthday to ไออ้วน!!</p>
+            <span>special gift for you</span>
         </div>
-        <button id="prepare-cake-btn" class="cta-button">รับเค้กของคุณ!</button>
-        <p id="age-summary" class="summary-text"></p>
+
+        <button id="startButton" class="start-button">Start!</button>
     </div>
 
-    <div class="container" id="cake-page" style="display: none;">
-        <h1 id="happy-bday-text" class="happy-bday-text"></h1>
-        <div class="cake-container">
-            <img id="cake-img" src="" alt="Birthday Cake" class="cake" style="cursor: pointer;">
-        </div>
-        <p class="instruction">แตะที่เค้กเพื่อไปเปิดการ์ดกัน!</p>
-    </div>
+    <div class="heart heart1">❤</div>
+    <div class="heart heart2">❤</div>
+    <div class="heart heart3">❤</div>
+    <div class="heart heart4">❤</div>
 
-    <div class="container" id="letter-page" style="display: none;">
-        <div class="letter-wrapper">
-            <div class="letter">
-                <p class="letter-greeting">สุขสันต์วันเกิดนะเธอ 🎂✨</p>
-                <p id="message-text" class="letter-body-text"></p>
-                <p class="letter-signature">ขอให้เป็นปีที่ดีนะ!</p>
-            </div>
-            <div class="envelope">
-                <div class="envelope-back"></div>
-                <div class="envelope-front-pocket"></div>
-            </div>
-        </div>
-        <p id="letter-instruction" class="instruction">คลิกที่การ์ดเพื่อเปิดอ่าน</p>
-    </div>
     <script src="script.js"></script>
 </body>
 </html>

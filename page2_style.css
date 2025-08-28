@@ -1,0 +1,165 @@
+body {
+    background: linear-gradient(to bottom, #fee9f2, #fddde8);
+    font-family: 'Mitr', sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start; /* จัดชิดบน */
+    min-height: 100vh;
+    margin: 0;
+    overflow: auto; /* อนุญาตให้เลื่อนได้ */
+    position: relative;
+    color: #a55a71;
+    padding: 10px;
+    box-sizing: border-box;
+}
+
+.container {
+    background-color: rgba(255, 255, 255, 0.4); /* เอฟเฟกต์กระจกฝ้า */
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    
+    padding: 20px;
+    border-radius: 20px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    max-width: 340px;
+    width: 100%;
+    box-sizing: border-box;
+    position: relative;
+    z-index: 20;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.bow-icon {
+    width: 130px;
+    margin: 0 auto 10px auto;
+}
+
+.bow-icon img {
+    width: 100%;
+}
+
+h1 {
+    font-size: 2.0rem;
+    margin-top: 0;
+    margin-bottom: 8px;
+    color: black;
+    text-shadow: 1px 1px 2px rgba(0,0,0,0.05);
+}
+
+.hint-text {
+    font-size: 1.0rem;
+    color: #c48c9e;
+    margin-bottom: 20px;
+}
+
+.code-input {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+
+.code-digit {
+    width: 38px;
+    height: 52px;
+    border: 2px solid #ffb3c1;
+    border-radius: 10px;
+    margin: 0 4px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.7rem;
+    font-weight: bold;
+    color: #ff7d9e;
+    background-color: #ffe8ee;
+    box-shadow: inset 0 2px 5px rgba(0, 0, 0, 0.05);
+}
+
+.keyboard {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 10px;
+    margin-bottom: 20px;
+    width: 100%;
+}
+
+.key {
+    background-color: #ffb3c1;
+    border: none;
+    border-radius: 15px;
+    padding: 12px 0;
+    font-family: 'Mitr', sans-serif;
+    font-size: 1.3rem;
+    font-weight: bold;
+    color: white;
+    cursor: pointer;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: background-color 0.2s, transform 0.1s;
+}
+
+.key:active {
+    background-color: #ff7d9e;
+    transform: translateY(1px);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.special-key {
+    background-color: #c48c9e;
+    font-size: 1rem;
+}
+
+.special-key:active {
+    background-color: #a55a71;
+    transform: translateY(1px);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.unlock-button {
+    background-color: #ff7d9e;
+    border: none;
+    border-radius: 25px;
+    padding: 10px 30px;
+    font-family: 'Mitr', sans-serif;
+    font-size: 0.95rem;
+    font-weight: bold;
+    color: white;
+    cursor: pointer;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.15);
+    transition: background-color 0.2s, transform 0.1s;
+}
+
+.unlock-button:active {
+    background-color: #c48c9e;
+    transform: translateY(1px);
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.15);
+}
+
+.heart {
+    position: absolute;
+    color: #ff7d9e;
+    font-size: 1.5rem;
+    z-index: 1;
+    top: 105%; 
+    animation: floatUp 7s infinite ease-in;
+}
+.heart1 { left: 15%; animation-delay: 0s; }
+.heart2 { left: 85%; animation-delay: 2s; font-size: 2rem; }
+.heart3 { left: 70%; animation-delay: 3.5s; font-size: 1rem; }
+.heart4 { left: 25%; animation-delay: 5s; font-size: 1.2rem; }
+.heart5 { left: 50%; animation-delay: 6s; font-size: 1.8rem; }
+@keyframes floatUp {
+    0% {
+        top: 105%;
+        opacity: 0.9;
+    }
+    90% {
+        opacity: 0.9;
+    }
+    100% {
+        top: -10%;
+        opacity: 0;
+    }
+}
